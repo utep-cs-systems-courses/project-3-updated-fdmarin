@@ -2,7 +2,6 @@
 	.p2align 1,0
 	.text			;jt is constant (in flash)
 
-
 	.extern changed
 	.extern led_changed
 	.extern alternate
@@ -49,5 +48,5 @@ case3:
 end:
 	mov r12, &led_changed	;led_changed=0
 	call #led_update	;led_update()
-	mov.b #1, r12		;return 0
+	mov.b #1, r12		;return 1
 	pop r0
